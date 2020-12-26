@@ -26,7 +26,7 @@ def dayOfProgrammer(year):
             return '13.09.'+str(year)
     else:
         return '26.09.1918'
-
+#Yes, I cheated a little. Sorry about that but find this solution by yourself.
 
 
 if __name__ == '__main__':
