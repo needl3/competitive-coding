@@ -30,7 +30,7 @@ var strToNumMap = map[string]int{
 }
 
 func main() {
-	file, err := os.Open("./input.txt")
+	file, err := os.Open("../input.txt")
 	if err != nil {
 		log.Fatalf("Unable to open file\n")
 	}
