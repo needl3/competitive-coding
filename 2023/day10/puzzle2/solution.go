@@ -15,9 +15,6 @@ func (p Point) coord() string {
 	return fmt.Sprintf("%d,%d", p.X, p.Y)
 }
 
-var ROW = 140
-var COL = 140
-
 func printMat(mat [][]string) {
 	for _, i := range mat {
 		for _, j := range i {
@@ -28,8 +25,8 @@ func printMat(mat [][]string) {
 }
 
 func main() {
-	file, _ := os.Open("input.txt")
-	// file, _ := os.Open("../input-submit.txt")
+	// file, _ := os.Open("input.txt")
+	file, _ := os.Open("../input-submit.txt")
 
 	var input []string
 	for {
@@ -165,9 +162,9 @@ func findPath(currentPoint *Point, origin *Point, input []string) (int, [][]stri
 	length := 2 // S and this starting cell counts
 
 	// Initialize a false matrix
-	loop := make([][]string, ROW)
+	loop := make([][]string, len(input))
 	for i := range loop {
-		loop[i] = make([]string, COL)
+		loop[i] = make([]string, len(input[0]))
 		for j := range loop[i] {
 			loop[i][j] = " "
 		}
