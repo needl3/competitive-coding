@@ -6,8 +6,10 @@ import (
 
 	"github.com/needl3/adventofcode/2023/day1"
 	"github.com/needl3/adventofcode/2023/day10"
+	"github.com/needl3/adventofcode/2023/day14"
 	"github.com/needl3/adventofcode/2023/day15"
 	"github.com/needl3/adventofcode/2023/day16"
+	"github.com/needl3/adventofcode/2023/day18"
 	"github.com/needl3/adventofcode/2023/day2"
 	"github.com/needl3/adventofcode/2023/day3"
 	"github.com/needl3/adventofcode/2023/day4"
@@ -32,9 +34,10 @@ var sols = []func(){
 	func() {}, func() {},
 	func() {}, func() {},
 	func() {}, func() {},
-	func() {}, func() {},
+	day14.Puzzle1, day14.Puzzle2,
 	day15.Puzzle1, day15.Puzzle2,
 	day16.Puzzle1, day16.Puzzle2,
+	func() {}, func() {},
 }
 
 var puzzles = map[string]map[string]func(){}
@@ -53,7 +56,11 @@ func init() {
 func main() {
 	argsWithoutProg := os.Args[2:]
 	if len(argsWithoutProg) == 2 {
-		puzzles[argsWithoutProg[0]][argsWithoutProg[1]]()
+		if fxn, ok := puzzles[argsWithoutProg[0]][argsWithoutProg[1]]; ok {
+			fxn()
+		} else {
+			fmt.Println("[x] No solution found")
+		}
 	} else {
 		fmt.Println("[x] Invalid command")
 	}
