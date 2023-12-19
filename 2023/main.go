@@ -9,7 +9,6 @@ import (
 	"github.com/needl3/adventofcode/2023/day14"
 	"github.com/needl3/adventofcode/2023/day15"
 	"github.com/needl3/adventofcode/2023/day16"
-	"github.com/needl3/adventofcode/2023/day18"
 	"github.com/needl3/adventofcode/2023/day2"
 	"github.com/needl3/adventofcode/2023/day3"
 	"github.com/needl3/adventofcode/2023/day4"
