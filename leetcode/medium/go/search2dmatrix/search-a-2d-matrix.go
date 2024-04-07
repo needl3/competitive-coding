@@ -1,3 +1,7 @@
+package search2dmatrix 
+
+import "fmt"
+
 func searchMatrix(matrix [][]int, target int) bool {
 	if rowIndex := binSearchRow(matrix, target); rowIndex >= 0 {
 		foundIndex := binSearch(matrix[rowIndex], target)
@@ -36,4 +40,8 @@ func binSearch(row []int, target int) int {
 		}
 	}
 	return -1
+}
+
+func Exec() {
+	fmt.Println("Hello, world!")
 }

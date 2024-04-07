@@ -53,7 +53,7 @@ func init() {
 }
 
 func main() {
-	argsWithoutProg := os.Args[2:]
+	argsWithoutProg := os.Args[1:]
 	if len(argsWithoutProg) == 2 {
 		if fxn, ok := puzzles[argsWithoutProg[0]][argsWithoutProg[1]]; ok {
 			fxn()
