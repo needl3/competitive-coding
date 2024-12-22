@@ -1,5 +1,8 @@
 package main
 
+// How to run:
+// go run . d1 p1
+
 import (
 	"fmt"
 	"os"
@@ -40,10 +43,11 @@ var sols = []func(){
 }
 
 var puzzles = map[string]map[string]func(){}
+var NO_OF_DAYS = 25
 
 func init() {
 	counter := 0
-	for i := 1; i <= 25 && counter < len(sols); i++ {
+	for i := 1; i <= NO_OF_DAYS && counter < len(sols); i++ {
 		puzzles[fmt.Sprintf("d%d", i)] = map[string]func(){}
 		for j := 1; j <= 2 && counter < len(sols); j++ {
 			puzzles[fmt.Sprintf("d%d", i)][fmt.Sprintf("p%d", j)] = sols[counter]
