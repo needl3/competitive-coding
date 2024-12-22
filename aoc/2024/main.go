@@ -8,7 +8,7 @@ import (
 )
 
 var sols = []func(){
-	day1.Puzzle1,
+	day1.Puzzle1, day1.Puzzle2,
 }
 
 var puzzles = map[string]map[string]func(){}
