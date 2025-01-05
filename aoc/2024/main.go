@@ -5,10 +5,13 @@ import (
 	"os"
 
 	"github.com/needl3/adventofcode/2024/day1"
+	"github.com/needl3/adventofcode/2024/day3"
 )
 
 var sols = []func(){
 	day1.Puzzle1, day1.Puzzle2,
+	nil, nil,
+	day3.Puzzle1, day3.Puzzle2,
 }
 
 var puzzles = map[string]map[string]func(){}
